@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var produtos = [
+        { produto: "arroz", preço: 30 },
+        { produto: "feijão", preço: 13 },
+        { produto: "carne", preço: 31 },
+        { produto: "batata", preço: 8 },
+      ];
+      var arrayNv = produtos.reduce((a, b) => {
+        return a + b.preço;
+      }, 0);
+      console.log(`a soma de todos os preços é: ${arrayNv}`);
+      produtos.sort((a, b) => a.preço - b.preço);
+      var maior = produtos[produtos.length - 1];
+      console.log(`O maior é ${maior.preço}`);
+      console.log(`O menor é ${produtos[0].preço}`);
+    </script>
+  </body>
+</html>

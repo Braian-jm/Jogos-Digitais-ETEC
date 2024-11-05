@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var array = [];
+      var arraynv = [];
+      function numeroAleatorio(min, max) {
+        return parseInt(Math.random() * (max - min) + min);
+      }
+      for (let i = 0; i <= 9; i++) {
+        array.push(numeroAleatorio(1, 30));
+        arraynv = array.filter((x) => x > 10);
+        arraynv.sort((a, b) => b - a);
+        if (i == 9) {
+          alert("abra o console");
+          console.log(`array inicial: ${array}`);
+          console.log(`RESULTADO: ${arraynv}`);
+        }
+      }
+    </script>
+  </body>
+</html>
